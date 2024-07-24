@@ -1,11 +1,7 @@
 function cleanSet(set, startString) {
   const result = [];
 
-  if (
-    !(set instanceof Set) ||
-    typeof startString !== 'string' ||
-    startString.length === 0
-  ) {
+  if (!(set instanceof Set) || typeof startString !== 'string' || startString.length === 0) {
     return '';
   }
 
@@ -14,6 +10,7 @@ function cleanSet(set, startString) {
       result.push(value.slice(startString.length));
     }
   }
+
   return result.join('-');
 }
 
