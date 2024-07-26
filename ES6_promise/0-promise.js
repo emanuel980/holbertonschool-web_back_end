@@ -1,13 +1,13 @@
 function getResponseFromAPI() {
-    return new Promise((resolve, reject) => {
-      // Always resolve to simulate a successful API response
-      if (true) {
-        resolve();
-      } else {
-        reject();
-      }
-    });
-  }
-  
-  export default getResponseFromAPI;
-  
+  return new Promise((resolve, reject) => {
+    const success = true; // Simulating a successful response
+
+    if (success) {
+      resolve('Success');
+    } else {
+      reject(new Error('Failed'));
+    }
+  });
+}
+
+export default getResponseFromAPI;
